@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-# ContextForge Pre-Commit Hook Launcher
-python scripts/pre_commit_check.py || py scripts/pre_commit_check.py || python3 scripts/pre_commit_check.py
