@@ -1,0 +1,152 @@
+# ==============================================================================
+# ContextForge — Master .gitignore
+# ==============================================================================
+# Security Invariant: NEVER track secrets, API keys, credentials, or local data.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Secrets, Environment & Credentials
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# Private Keys, Certificates, Keystores
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+*.asc
+*.keystore
+
+# Service Account JSONs & Credential Dumps
+*service-account*.json
+*credentials*.json
+*gcp-key*.json
+*firebase*.json
+*secret*.json
+service_account.json
+gcp_sa.json
+
+# ------------------------------------------------------------------------------
+# 2. AI Agent, IDE & Machine-Local Ephemera
+# ------------------------------------------------------------------------------
+# Antigravity, Gemini, Cursor, Claude & Agent scratchpads/logs
+.antigravity/
+.antigravity/cache/
+.antigravity/logs/
+.agent/
+.agent/sessions/
+.cursor/
+.gemini/
+.gemini/local/
+task_history/
+brain/
+*.log
+agent_thoughts.log
+scratchpad.md
+temp_plan.txt
+run_notes.md
+scratch/
+
+# IDE Settings & Workspace Storage
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.vscode/workspaceStorage/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS-Specific Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------------------------
+# 3. Dependencies, Package Managers & Virtual Environments
+# ------------------------------------------------------------------------------
+# Node.js
+node_modules/
+.pnpm-store/
+jspm_packages/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Python & Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+htmlcov/
+.coverage.*
+*.cover
+
+# ------------------------------------------------------------------------------
+# 4. Build Artifacts, Compilers & Intermediate Outputs
+# ------------------------------------------------------------------------------
+.next/
+out/
+build/
+dist/
+.turbo/
+.cache/
+.parcel-cache/
+*.tsbuildinfo
+
+# ------------------------------------------------------------------------------
+# 5. Local Testing, Disposable Scripts & Database Dumps
+# ------------------------------------------------------------------------------
+scratch_*.py
+scratch_*.ts
+scratch_*.js
+test_local_*.py
+temp_run.*
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.dump
+*.sql.bak
+*.csv.tmp
+cypress/videos/
+cypress/screenshots/
+playwright-report/
+blob-report/
+test-results/
+coverage/
+.nyc_output/
